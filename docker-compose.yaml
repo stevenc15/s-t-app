@@ -1,0 +1,35 @@
+version: '3'
+services:
+  soccer-tracker-app:
+    build: .
+    ports:
+      - "3001:3001"
+      - "5001:5001"
+    environment:
+      NODE_ENV: production
+      DB_HOST: mysql
+      DB_USER: dock-user
+      DB_PASSWORD: dockPassword17
+      DB_NAME: d_c_app_db
+    depends_on:
+      mysql:
+        condition: service_healthy
+  
+
+      
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: kikoCama15*
+      MYSQL_USER: dock-user
+      MYSQL_PASSWORD: dockPassword17  
+      MYSQL_DATABASE: d_c_app_db
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./db_init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
