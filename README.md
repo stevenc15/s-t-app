@@ -88,6 +88,13 @@ s-t-app/
 - **Model Integration**: Leveraged YOLOV5 to create a trained model to identify players belonging to team 1 and team 2, creating annotations that track possession and camera movements statistics
 - **Replication**: Docker setup created for simple reproducibility
 
+## Development Timeline 
+- August 21st to October 5th: Model Development. Machine-Learning based tracking model implemented and used within a virtual environment. YOLOv5 model used to get basic tracking of persons on video, with functions created to modify notations of bounding boxes, and annotate team-player and identity ball possession.
+- October 5th to October 7th: React app initialized, overall app design and features designed.
+- October 7th to October 12th: Backend server created, user and video related endpoints created.
+- October 12th to October 19th: Cloud and Database configuration setup. Google Cloud Console leveraged for storage and MySQL used as database framework.
+- October 19th to October 23rd: Unit tests for each endpoint created.
+- October 23rd to October 
 ## Challenges and Lessons
 - **Unit Tests**: When testing, creating a mock database would have been helpful and testing endpoint behavior more thouroughly, not only setup logic
 - **Docker Setup**: Best practice to separate application components into different containers (frontend, backend, database)
