@@ -1,0 +1,26 @@
+
+/* Button styling */
+.logout-button {
+    font-size: 1.2em;
+    padding: 22px 24px;
+    background-color: #000000; /* Green button color */
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 85%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family:'Helvetica Neue' !important;
+    text-transform: none;
+    font-weight: bold;
+    top: 85%;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    left: 4%;
+    position: fixed;
+  }
+
+
+.logout-button:hover {
+  background-color: #5d5d5d;
+  transform: scale(1.05);
+}

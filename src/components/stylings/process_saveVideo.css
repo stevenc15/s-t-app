@@ -1,0 +1,71 @@
+/* Button styling */
+.process-button {
+    font-size: 1.4em;
+    padding: 14px 28px;
+    background-color: #4670b5; /* Green button color */
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    font-family:'Helvetica Neue' !important;
+    text-transform: none;
+}
+
+.process-button:hover {
+    background-color: #6eb5ff; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.save-button {
+  font-size: 1.0em;
+  padding: 14px 28px;
+  background-color: #5079ba; /* Green button color */
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 600;
+  font-family:'Helvetica Neue' !important;
+  text-transform: none;
+  position: absolute; 
+  top: 80%;
+  left: 80%;
+}
+
+.save-button:hover {
+  background-color: #6eb5ff; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+
+/* Section title styling */
+.action-title {
+    font-size: 1.44em;
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* Section title styling */
+.upload-title {
+  font-size: 1em;
+  color: #000000;
+}
+/* Section title styling */
+.processing-title {
+  font-size: 1.2em;
+  color: #000000;
+}
+  .processing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .processing-container p {
+    margin-bottom: 10px;
+  }

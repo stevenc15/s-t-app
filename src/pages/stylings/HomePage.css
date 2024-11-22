@@ -1,0 +1,213 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Section title styling */
+.processing-title {
+  font-size: 1.2em;
+  color: #000000;
+}
+
+/* Section title styling */
+.video-name {
+  font-size: .98em;
+  color: #000000;
+}
+
+/* Section title styling */
+.message {
+  font-size: 1.0em;
+  color: #000000;
+}
+
+.page-container{
+  max-height: 100vh;
+  overflow-y: auto; /* Allows scrolling within the container, if needed */
+}
+
+.page-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244, 247, 243, 0.8); /* Light blue overlay */
+  z-index: -1;
+}
+
+/* Header with title and logout button */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.app-title {
+  font-size: 3em;
+  color: #000000; /* Pastel blue */
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+/* Cloud status alert */
+.cloud-status {
+  position: fixed;
+  top: 5%;
+  left: 12%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #ff3434;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+
+/* Logout button styling */
+.logout-button {
+  top: 25.5%;
+  left: 4.7%;
+  font-size: 1em;
+  color: #ffffff;
+}
+
+/* Upload area styling */
+.upload-area {
+  border: 2px dashed #4670b5; /* Blue outline */
+  padding: 40px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  cursor: pointer;
+}
+
+.upload-area:hover {
+  background-color: #d0ebff; /* Light blue on hover */
+}
+
+/* Section title styling */
+.action-title {
+  font-size: 1.44em;
+  color: #4670b5;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Video preview section */
+.video-preview h3 {
+  color: #4a90e2;
+}
+
+.video-preview video {
+  border: 5px solid #4a90e2;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.download-button {
+  margin-top: 10px;
+  font-size: 1em;
+  padding: 8px 16px;
+  background-color: #4670b5;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  font-weight: 600;
+  font-family:'Helvetica Neue' !important;
+  left: 80%;
+  top: 72%;
+}
+
+.download-button:hover {
+  background-color: #6eb5ff;
+}
+
+/* Buttons styling */
+.button-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.cta-button {
+  font-size: 1.2em;
+  padding: 10px 20px;
+  background-color: #6eb5ff; /* Pastel green */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color: #6eb5ff; /* Slightly darker green on hover */
+  transform: scale(1.05);
+}
+
+
+.cancel-button {
+  font-size: 1.2em;
+  padding: 5px 10px;
+  background-color: #fa4e4e; /* Pastel green */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+}
+
+.cancel-button:hover {
+  background-color: #9e383a; /* Slightly darker green on hover */
+  transform: scale(1.05);
+}
+
+.saves-button {
+  font-size: 1.2em;
+  padding: 5px 10px;
+  background-color: #6eb5ff; /* Pastel green */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+}
+
+.saves-button:hover {
+  background-color: #6eb5ff; /* Slightly darker green on hover */
+  transform: scale(1.05);
+}
+
+.saved-videos-button {
+  position: fixed;
+  font-size: 1.2em;
+  padding: 25px 20px;
+  top: 15%;
+  left: 2%;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+  background-color: #4670b5; /* Blue for Saved Videos button */
+}
+
+.saved-videos-button:hover {
+  background-color: #6eb5ff;
+  transform: scale(1.05);
+}

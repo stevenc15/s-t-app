@@ -1,0 +1,91 @@
+/* Basic reset to remove any default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #f0f0f0; /* Light text for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container for the entire Register page */
+.register-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #1e2a3a, #283d56); /* Dark gradient */
+}
+
+/* Styling for the message section */
+.register-page-message {
+    text-align: center;
+    background-color: #1c1f27;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Title text in the message section */
+.register-page-title {
+    font-size: 1.1em;
+    color: #000000; /* Yellow color */
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+/* Button for switching to login page */
+.register-page-switch-login {
+    text-align: center;
+}
+
+/* Styling for the "Switch to Login" button */
+.switch-to-login-button {
+    font-size: 1.2em;
+    padding: 12px 24px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.switch-to-login-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    .register-page-message {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .register-page-title {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .switch-to-login-button {
+        font-size: 1.1em;
+    }
+}

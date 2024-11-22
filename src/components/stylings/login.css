@@ -1,0 +1,225 @@
+/* Global styles for the Login page */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f7fc;
+    padding: 0 15px;
+}
+
+/* Title styling */
+.login-container h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Form container */
+.login-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Input styles */
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Button for Forgot Password */
+.email-title {
+    background-color: #95a5a6;
+    margin-top: 10px;
+}
+/* Button styles */
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Button for Forgot Password */
+.forgot-password-button {
+    background-color: #95a5a6;
+    margin-top: 10px;
+}
+
+.forgot-password-button:hover {
+    background-color: #b8b8b8;
+}
+
+.register-button {
+    background-color: #95a5a6;
+    margin-top: 10px;
+}
+
+.register-button:hover {
+    background-color: #b8b8b8;
+}
+
+
+.submit-button {
+    font-size: 1.0em;
+    padding: 14px 28px;
+    background-color: #000f05; /* Green button color */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    font-family:'Helvetica Neue' !important;
+    text-transform: none;
+}
+
+.submit-button:hover {
+    background-color: #b8b8b8;
+}
+/* Message container */
+.message {
+    font-size: 1rem;
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 2;
+    display: none;
+    opacity: 0;
+    animation: fadeIn 1.3s ease both;
+    backdrop-filter: blur(20px);
+  }
+
+/* Overlay styles when the overlay is active */
+.overlayActive {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+   height: 350px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+   width: 600px;
+  }
+  
+  .popup-overlay::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; 
+  }
+  
+  .popup h3 {
+    margin-top: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgb(81, 152, 223);
+    font-size: 24px;
+  }
+  
+  .popup button {
+     font-family: 'Josefin Sans', sans-serif;
+      width: 300px;
+      height: 40px;
+      padding: 10px;
+      margin-top: 30px;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+      
+      background-size: 200% 100%;
+      background-position: 100% 0;
+      transition: background-position .5s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      position: absolute;
+      margin-left: -450px;
+      margin-top: 150px;
+  }
+  
+  .popup button:hover {
+      background-position: 0 0;
+  }
+  
+  .stacked-input {
+    font-family: 'Josefin Sans', sans-serif;
+    width: 90%; 
+    padding: 15px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    outline: none;
+  }
+  
+  .stacked-input:focus {
+    border: 1px solid purple !important;
+    outline: none;
+  }
+  
+  .popup-message{
+  font-family: 'Josefin Sans', sans-serif;
+  color: red;
+  }
+  
+  
+  .login-result{
+  font-family: 'Josefin Sans', sans-serif;
+  color: red;
+  position: absolute;
+  margin-left: -440px;
+  }
+  
+  .error-message{
+  font-family: 'Josefin Sans', sans-serif;
+  color: red;
+  }

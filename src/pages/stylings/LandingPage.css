@@ -1,0 +1,207 @@
+/* Basic reset to remove any default margins and padding */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: 
+      linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)), /* Fading overlay */
+      url('../background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+/* Main container to hold the two sections */
+.landing-containe {
+    display: flex;
+    width: 175vh;
+    height: 95vh;
+    /*background: linear-gradient(to right, #6f747a, #d1d8e2); /* Dark gradient background */
+    border-radius: 20px; /* Add rounded corners */
+    /*overflow: hidden; /* Ensure that any child elements do not overflow the rounded corners */
+    position: relative; /* Important for absolute positioning inside this container */
+}
+
+/* Left section for title and content */
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: flex-start;
+    width: 35%; /* Left side takes up half of the screen */
+    height: 20%; /* Allow the title to take full height of the container */
+    padding-left: 50px; /* Space on the left side */
+}
+
+/* Title styling */
+.app-titl {
+    font-size: 2.3em; /* Adjust font size to fit within the circle */
+    color: #000000;
+    background-color: #7ffc90; /* Set the background color of the circle */
+    padding: 0.5em 1em; /* Add padding to make space around the text */
+    border-radius: 50%; /* Make the background circular */
+    display: inline-block; /* Make the element inline to fit around the text */
+    text-align: center; /* Center the text within the circle */
+    margin: 0; /* Reset margins if needed */
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: 'Helvetica Neue';
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for depth */
+}
+
+/* Right section for the button - Position it at the top-right */
+.content-container {
+    position: absolute; /* Absolute positioning within the parent */
+    top: 2px; /* Adjust distance from the top */
+    right: 10px; /* Adjust distance from the right */
+    width: auto; /* Let the button container be sized based on content */
+    height: auto;
+    padding: 2px; /* Padding around the button */
+    display: flex;
+    justify-content: flex-end; /* Align the content to the right */
+}
+
+/* Content container for the button */
+.content {
+    /*background-color: #d1d8e2; /* Darker background for content box */
+    padding: 15px;
+    border-radius: 15px;
+    /*box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);*/
+}
+
+/* Button styling */
+.cta-butto {
+    font-size: 1.4em;
+    padding: 14px 28px;
+    background-color: #000f05; /* Green button color */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    font-family:'Helvetica Neue' !important;
+    text-transform: none;
+}
+
+.cta-butto:hover {
+    background-color: #444444; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Prevent default link styling */
+.link-style {
+    text-decoration: none;
+}
+
+/* Lower section container */
+.lower-container {
+    display: flex;
+    justify-content: center; /* Center the whole lower section */
+    align-items: center;
+    width: 125%;
+    height: 150%; /* Make sure it takes up the lower half of the page */
+    padding: 20px;
+    gap: 40px; /* Space between the image containers */
+    margin-left: -10%;
+    margin-right: 12%;
+    transform: translateX(-4.34%);
+    position: relative;
+    z-index: 2;
+}
+
+/* Container for images */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:rgb(0, 0, 0);
+    gap: 10px;
+    width: 45%; /* Adjust width of each image container */
+    position: relative;
+    z-index: 4;
+}
+
+
+/* Image styling */
+.image-display {
+    max-width: 100%;
+    max-height: 700px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, z-index 0.3s ease; /* Smooth transition on hover */
+    position: relative;
+    z-index: 5;
+}
+
+.image-display:hover {
+    transform: scale(1.3); /* Enlarge image on hover */
+    z-index: 10;
+}
+
+/* Arrow container */
+.arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Explanation Text container */
+.explanation-container {
+    width: 55%;
+    padding: 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 18%; /* 20% from the top of the page */
+    left: 35%;
+    transform: translateX(-25%); /* Center horizontally */
+    z-index: 3;
+}
+
+.explanation-container h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.explanation-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    .title-container {
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .app-title {
+        font-size: 2.2em;
+        margin-bottom: 15px;
+    }
+
+    .cta-button {
+        font-size: 1.1em;
+    }
+}

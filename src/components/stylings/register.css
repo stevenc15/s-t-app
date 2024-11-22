@@ -1,0 +1,211 @@
+/* Basic reset to remove any default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container for centering content on the page */
+.landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ffffff, #283d56);
+}
+
+/* Content container for the register form */
+.register-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    max-width: 100%;
+}
+
+/* Title styling */
+.register-title {
+    font-size: 2.8em;
+    color: #000000;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Input field styles */
+.register-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    color: #000000;
+    font-size: 1.2em;
+}
+
+.register-input.error {
+    border-color: #e74c3c; /* Red border for error */
+}
+
+.register-input:focus {
+    outline: none;
+    border-color: #f39c12; /* Highlight input on focus */
+}
+
+/* Close button styling */
+.close-button {
+    position: relative;
+    top: -7px;
+    right: 1px;
+    background: transparent;
+    border-radius: 50%;
+    color: #342f2f;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #e3d9d8;
+}
+
+/* Button styling */
+.register-butto {
+    font-size: 1.4em;
+    padding: 14px 28px;
+    background-color: #4a93cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.register-butto:hover {
+    background-color: #84c9f4;
+    transform: scale(1.05);
+}
+
+/* Error message styling */
+.error-message {
+    color: #e74c3c;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.verification-popup-error {
+    font-size: 1.1em;
+}
+
+/* Overlay styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Verification popup styling */
+.verification-popup {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1c1f27;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    max-width: 100%;
+    z-index: 20;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.verification-popup.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.verification-popup input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #2e3a47;
+    border: 2px solid #34495e;
+    border-radius: 6px;
+    color: #f0f0f0;
+    font-size: 1.2em;
+}
+
+.verification-popup button {
+    font-size: 1.4em;
+    padding: 14px 28px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.verification-popup button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    .register-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .register-title {
+        font-size: 2.2em;
+        margin-bottom: 15px;
+    }
+
+    .register-button {
+        font-size: 1.1em;
+    }
+
+    .verification-popup {
+        width: 90%;
+    }
+}
