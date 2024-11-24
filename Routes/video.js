@@ -1,3 +1,4 @@
+//token verification es un PROBLEMA
 //all endpoints checked for, no major adjustments needed, but still could adjust
 const express = require('express');
 const router = express.Router()
@@ -12,7 +13,7 @@ const User = require('../Schemas/UserSchema'); //user model
 // Configure multer to store uploaded files in the 'inputs' folder temporarily
 const input = multer({ dest: './inputs' }); // Multer stores uploaded files in the '/inputs' directory
 
-const {verifyToken} = require ('../Routes_help/jwt'); //create helper function `for jwts
+const verifyToken = require ('../Routes_help/jwt'); //create helper function `for jwts
 const {Op} = require('sequelize'); //operator from sequelize module
 const dotenv = require('dotenv');
 dotenv.config({path: '../backend_details.env'});
@@ -22,7 +23,7 @@ const ffmpeg = require('fluent-ffmpeg');
 const useCloud = process.env.USE_CLOUD===true;
 //CHECKED for 200, 500
 
-router.post('/process_video', input.single('video'), async(req, res) => { //fix verify token
+router.post('/process_video', verifyToken, input.single('video'), async(req, res) => { //fix verify token
     console.log('Request headers:', req.headers);
     console.log('Request body:', req.body);
     console.log('Request file:', req.file);
@@ -226,3 +227,8 @@ router.get('/download_video', verifyToken, async(req, res)=>{
     }
 });
 module.exports=router;
+
+
+
+
+    
