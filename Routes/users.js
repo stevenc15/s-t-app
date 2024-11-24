@@ -11,7 +11,7 @@ const jwtKey = 'EnestaVidaquieroTriunfaryHaceraDiosorgullosoDemi'; //jwt key
 const {genToken} = require('../Routes_help/verification'); //generate verification tokens
 const {sendVemail} = require('../Routes_help/v_email'); //send verification email
 const {sendPchange} = require('../Routes_help/password_change'); //send password change option
-const {verifyToken} = require ('../Routes_help/jwt'); //create helper function `for jwts
+const verifyToken = require ('../Routes_help/jwt'); //create helper function `for jwts
 
 //CHEKED for 401, 402, 400, 200
 router.post('/login', async(req, res)=>{
