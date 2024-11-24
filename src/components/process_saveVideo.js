@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+ import React, {useState, useEffect} from 'react';
 import Upload from './Upload';
 import {useUser} from './userContext';
 import {getCookie} from './cookieUtils';
@@ -7,11 +7,11 @@ import './stylings/process_saveVideo.css';
 
 const Process_saveVideo = ({setVideoURL, setOutputVideo, outputVideo}) =>{
   
-
   //grab user ID
   const {setUserId} = useUser();
   const storeUserId = getCookie('userId');
   const storedToken = getCookie('token');
+
   useEffect( ()=> {
     if (storeUserId){
         setUserId(storeUserId)
@@ -88,7 +88,7 @@ const Process_saveVideo = ({setVideoURL, setOutputVideo, outputVideo}) =>{
       method: 'POST', 
       body: formData, 
       headers: {
-        'Authorization': storedToken
+        'Authorization': `Bearer ${storedToken}`
       }
     });
 
@@ -101,7 +101,8 @@ const Process_saveVideo = ({setVideoURL, setOutputVideo, outputVideo}) =>{
       console.log('Processed video URL:',data.videoUrl);
       setOutputVideo(`http://localhost:5001${data.videoUrl}`);
       console.log('Output video set to:', `http://localhost:5001${data.videoUrl}`);
-    } else { 
+    } else {
+      setIsProcessing(false); 
       console.error('Error processing video'); 
     }
   };
@@ -121,7 +122,7 @@ const Process_saveVideo = ({setVideoURL, setOutputVideo, outputVideo}) =>{
         body:js,
         headers:{
             'Content-Type':'application/json',
-            'Authorization': storedToken
+            'Authorization': `Bearer ${storedToken}`
         }
     });
 
