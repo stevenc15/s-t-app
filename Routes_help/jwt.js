@@ -6,9 +6,9 @@ const verifyToken = (req, res, next ) => { //middleware to allow user to proceed
     const token = req.headers['authorization']; //grab token from Authorization header
 
     console.log('Authorization header:', token); 
-
+//{/*&& token.startsWith('Bearer ')*/}
     if(token && token.startsWith('Bearer ')){ //if token present
-        
+        console.log('token present');
         const actualToken = token.split(' ')[1];
 
         //verify token, jwtkey
@@ -24,4 +24,4 @@ const verifyToken = (req, res, next ) => { //middleware to allow user to proceed
     }
 };
 
-module.exports={verifyToken};
+module.exports = verifyToken;
