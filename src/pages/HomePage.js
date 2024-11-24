@@ -69,8 +69,9 @@ const [progress, setProgress] = useState(0);
         method: 'POST',
         body:js,
         headers:{
-            'Content-Type':'application/json',
-            'Authorization': storedToken
+            'authorization': `Bearer ${storedToken}`,
+            'Content-Type':'application/json'
+            
         }
     });
 
@@ -153,7 +154,7 @@ const [progress, setProgress] = useState(0);
             placeholder='Video Name'
             />
             <button onClick={callSaveVideo} className='saves-button'>Save</button>
-            <button onClick={()=>setPopupVisible(false)} className='cancel-button'>Cancel</button>
+            <button onClick={()=>{setPopupVisible(false); setMessage('')}} className='cancel-button'>Cancel</button>
           </div>
         )}
 
