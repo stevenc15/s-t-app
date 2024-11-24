@@ -6,26 +6,6 @@ const cors = require('cors');
 const path = require('path');
 require('./Schemas/associations');
 
-/*
-const WebSocket = require('ws');
-const http = require('http');
-const server = http.createServer(app);
-const wss = new WebSocket.Server({server});
-const {setWsClient}=require('./Routes_help/videoProcessor');
-
-wss.on('connection', (ws) =>{
-    console.log('client connected, websocket1');
-    setWsClient(ws);
-
-
-
-    ws.on('close', ()=>{
-        console.log('client disconnected');
-        setWsClient(null);
-
-    });
-});
-*/
 
 const sequelize = require('./database/database');
 
@@ -54,6 +34,11 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use(express.json());
+
+app.use('/outputs', (req, res, next) => {
+    res.setHeader('Content-Disposition', 'attachment');
+    next();
+  });
 
 // Make files from the 'outputs' directory static
 app.use('/outputs', express.static(path.join(__dirname, 'Routes', 'outputs')));
